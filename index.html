@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/index.css" />
+    <!-- Importing THREE.js to make this application more portable -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.173.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
+          }
+        }
+    </script>
+</head>
+
+
+<body style="display:flex; justify-content: center; height: 100svh">
+    <!-- THREE.js scene. Button onclick are set in index.css -->
+    <div id="scene_container" style="margin: auto">
+        <h1 id="title">Arthur Scharf</h1>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+
+</html>
