@@ -21,16 +21,15 @@ Once we manipulate the cube once, we'll begin showing faces.
 
 // Creates a scene object and a camera object
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+//scene.background = new THREE.Color(0x120821);
+const camera = new THREE.PerspectiveCamera(75, (window.innerWidth*2) / window.innerHeight, 0.1, 1000);
 
 
 
 // Creates a renderer object, set's it's size, and appends it to the DOM as a child
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight / 2);
 document.getElementById("scene_container").appendChild(renderer.domElement);
-
-
 
 
 
@@ -39,6 +38,7 @@ document.getElementById("scene_container").appendChild(renderer.domElement);
 const light = new THREE.PointLight(0xffffff, 10, 100);
 light.position.set(camera.position.x, camera.position.y, camera.position.z);
 scene.add(light);
+
 
 
 
@@ -67,11 +67,12 @@ scene.add(cube);
 // ----- Creates controls ----- //
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false; // cube should stay centered
+controls.enableZoom = false;
 controls.enableDamping = true;
 controls.rotateSpeed = 0.3;
 controls.minPolarAngle = Math.PI * (1 / 4);
 controls.maxPolarAngle = Math.PI * (3 / 4);
-camera.position.set(1.5, 1.5, 1.5);
+camera.position.set(1.8, 1.8, 1.8);
 controls.update(); // must be called after any changes to the camera's transform
 
 
@@ -86,11 +87,11 @@ addEventListener('resize', (event) => {
 	Without this, the camera will continue to calculate geometry position relative to the camera
 	as if the canvas were at the same size. This sill distort the image
 	*/
-	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.aspect = (window.innerWidth *2)/ (window.innerHeight);
 	camera.updateProjectionMatrix(); // This step is key to avoid distortion
 
 	// Resizing renderer
-	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(window.innerWidth , window.innerHeight / 2);
 });
 
 
@@ -189,7 +190,6 @@ renderer.setAnimationLoop(
 			else if (dot <= -(Math.PI / 4)) { // still positive but closest to z-axis
 				console.log(" -x");
 			}
-
 			dot = cameraFacing.dot(new THREE.Vector3(0, 0, 1));
 			if (dot >= (Math.PI / 4)) { 
 				console.log(" z");
