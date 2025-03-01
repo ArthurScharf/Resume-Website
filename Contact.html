@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="styles/index.css" />
+
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Introduction</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+    </header>
 
-    <form action="#" method="post">
-        <fieldset>
-            <legend>Contact Me</legend>
 
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>  <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+    <div id="contact">
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contact Me</legend>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>  <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
 
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+
 
 </body>
 </html>

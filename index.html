@@ -11,25 +11,16 @@
         }
     </style>
     <link rel="stylesheet" href="styles/index.css" />
-    <!-- Importing THREE.js to make this application more portable -->
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.173.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
-          }
-        }
-    </script>
 </head>
 
 
 <body>
     <header>
         <nav>
-            <a href="#info">Introduction</a>
-            <a href="#scene_container">Projects</a>
-            <a href="#contact_fieldset">Contact Info</a>
-            <a href="#resume">Resume</a>
+            <a href="index.html">Introduction</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact Me</a>
         </nav>
     </header>
 
@@ -38,7 +29,7 @@
     <!-- Personal information -->
     <div id="info">
         <div id="info_grid_container">
-            <img id="selfie" src="/public/selfie.jpg" alt="An image of Arthur Scharf" />
+            <img id="selfie" src="public/selfie.jpg" alt="An image of Arthur Scharf" />
             <div id="introduction">
                 <h1>Arthur Scharf</h1>
                 <p style="font-style: italic"><b>Curious, Driven, Consistent</b></p>
@@ -46,174 +37,35 @@
                 <p>
                     Hi! I'm Arthur, a student currently enrolled in <a href="https://www.algonquincollege.com/sat/program/computer-programming/">Algonquin College - Computer Programming</a>.
                     I've been programming for about 6 years now. I started my journey using Python, and quickly fell in love with the field.
-                    I've since made it my mission to learn as much as I can, while exploring the vast world of information technology. 
+                    I've since made it my mission to learn as much as I can, while exploring the vast world of information technology.
                     Along the way I've come to love game development, game engine programming, and network programming.
                 </p>
                 <p style="margin-top: 10px;">
                     Outside of my school work and personal projects, I maintain an interest in a few hobbies. I love lifting weights. I started going to the gym when I was
                     23. I now lift 5 times a week with no intention of stopping anytime soon.
-                    I enjoy playing games with my friends. It's a great social outlet. I also enjoy 
+                    I enjoy playing games with my friends. It's a great social outlet. I also enjoy
                     building and painting miniatures. I've got quite a collection going
                 </p>
             </div>
             <div id="college_info">
                 <p>
-                   COLLEGE INFO 
+                    COLLEGE INFO
                 </p>
                 <br />
-               <!-- <a href="https://www.algonquincollege.com/sat/program/computer-programming/">
-                    Algonquin College - Computer Programming
-                </a>-->
+                <!-- <a href="https://www.algonquincollege.com/sat/program/computer-programming/">
+                     Algonquin College - Computer Programming
+                 </a>-->
             </div>
         </div>
     </div>
 
 
-    <!-- Personal Projects -->
     <!-- THREE.js scene. Button onclick are set in index.css -->
-    <div id="scene_container"></div>
+    <!--<div id="projects">
+        <div id="scene_container"></div>
+    </div>-->
 
-
-
-    <div id="contact">
-        <form action="#" method="post">
-            <fieldset id="contact_fieldset">
-                <legend>Contact Me</legend>
-
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>  <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
-    </div>
-
-
-
-
-    <div id="resume">
-
-        <div id="contact_info_container">
-            <b><p style="font-size: larger">Arthur Scharf</p></b>
-            <p>scha0193@algonquincollege.com</p>
-            <p>(613) 447-2749</p>
-            <a href="https://github.com/ArthurScharf?tab=repositories">Github</a>
-            <a href="https://www.linkedin.com/in/arthur-scharf-806642180/">LinkedIn</a>
-            <br />
-        </div>
-
-
-        <!-- Where I'd like to be (Objective) -->
-        <div class="paragraphs">
-            <h2>Where I'd like to be</h2>
-            <p>
-                I first started programming with an interest in game development. I'm still very passionate about the field, having spent countless hours teaching myself the Unreal Engine 4/5,
-                and even trying my hand at building games from scratch. Working in the games industry would be a dream come true, but it's not the only subject I'm fascinated by.
-            </p>
-            <p>
-                Building my own protocol for my networking projects fed a curiosity in me for the internet that I've had since I was a kid.
-                An opportunity to continue to learn about intercomputer communication is something I could never pass up
-
-            </p>
-        </div>
-
-        <hr>
-
-        <!-- Work Experience -->
-        <div class="paragraphs">
-            <h2 style="margin-bottom: 12px;">Work Experience</h2>
-            <h3>Bartender</h3>
-            <p>
-                O'Briens Eatery, Ottawa, Ontario &nbsp;&nbsp;&nbsp;&nbsp;(Jan 2024 - Present)
-            </p>
-            <ul>
-                <li>
-                    Provide strong customer experience and serving food and drink
-                </li>
-                <li>
-                    Maintain a healthy relationship with coworkers within a high-tension environment
-                </li>
-                <li>
-                    Dealing with drunk or unruly customers in a way that doesn't exacerbate the situation
-                </li>
-                <li>
-                    Restaurant upkeep and maintenance
-                </li>
-                <li>
-                    Work without supervision often, and without issue
-                </li>
-            </ul>
-        </div>
-
-
-        <hr />
-
-        <!-- SKills -->
-        <div class="paragraphs">
-            <h2 style="margin-bottom: 12px">Relevant Skills</h2>
-            <b><p>Native Application Development for Windows</p></b>
-            <ul>
-                <li>Java (JUnit, Javadoc Spring Boot)</li>
-                <li>C# (.NET)</li>
-                <li>C++ (Win32 API, OpenGL)</li>
-            </ul>
-            <b><p>Web & Networking</p></b>
-            <ul>
-                <li>JavaScript, HTML, CSS</li>
-                <li>WinSock API (C++)</li>
-                <li>XAMPP</li>
-            </ul>
-            <b><p>Scripting & Testing</p></b>
-            <ul>
-                <li>Python, Windows PowerShell, Bash (Ubuntu)</li>
-            </ul>
-            <b><p>Database Systems</p></b>
-            <ul>
-                <li>Oracle</li>
-                <li>SQL Server</li>
-                <li>MySQL Workbench</li>
-                <li>MS Access</li>
-                <li>SQL (tSQL, PostGreSQL)</li>
-            </ul>
-            <b><p>M365</p></b>
-            <ul>
-                <li>Excel, Word, Access</li>
-            </ul>
-            <b><p>Ubuntu/Linux</p></b>
-            <ul>
-                <li>System Administration</li>
-                <li>Hardware management (Partitioning and Formatting Memory)</li>
-                <li>Bash</li>
-            </ul>
-            <b><p>Professional Communication</p></b>
-            <ul>
-                <li>Patient, kind, and clear communicator</li>
-                <li>Adept at communicating technical & complex information</li>
-                <li>Experienced with client communication</li>
-                <li>Experienced working in a team</li>
-            </ul>
-        </div>
-
-        <!-- Education -->
-        <div class="paragraphs">
-            <h2>Education</h2>
-            <b><p>Computer Programming - Algonquin College</p></b>
-            <p><a href="https://www.algonquincollege.com/sat/program/computer-programming/">Computer Programming - Algongquin College</a></p>
-            <p>(Sept. 2024 - Aug. 2026)</p>
-            <br />
-            <p><strong>Computer Science (Algorithms) (Incomplete). Minor in Mathematics (Complete)</strong></p>
-            <p><a href="https://admissions.carleton.ca/programs/algorithms/">Algorithms - Undergraduate Admissions - Carleton University</a></p>
-            <p>(Sept. 2019 - Aug. 2021)</p>
-        </div>
-
-
-    </div> <!-- End: <div> resume -->
-
-    <script type="module" src="/src/main.js"></script>
+    <script src="src/main.js"></script>
 </body>
 
 

@@ -18,7 +18,7 @@ This application uses Node.js
 
 
 
-First Page
+First Page (index)
 	- Title containing "Arthur Scharf"
 	- A picture of me
 	- Description of me in two sentences of less. Emphasize
@@ -32,7 +32,7 @@ First Page
 	
 	
 	
-Second page
+Second page (resume)
 	- Contact info
 		- Full Name
 		- Email address
@@ -51,7 +51,7 @@ Second page
 		
 		
 		
-Projects
+Projects (projects)
 	For each project
 		Title
 		description
@@ -69,7 +69,7 @@ Projects
 		
 		
 		
-Contact Page XXX
+Contact Page (contact)
 	form with fields for
 		Name
 		Email,

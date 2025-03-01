@@ -2,14 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>My first three.js app</title>
+    <title>Projects</title>
     <style>
         body {
             margin: 0;
         }
     </style>
+    <link rel="stylesheet" href="styles/index.css" />
 </head>
 <body>
-    <script type="module" src="/Projects.js"></script>
+    <header>
+        <nav>
+            <a href="index.html">Introduction</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Personal Projects -->
+    <div id="projects" class="carousel-container">
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+            <img src="public/face.jpg" loading="eager">
+            <div class="carousel-text">
+                <h2>Slide 1 Title</h2>
+                <p>Slide 1 Description</p>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="public/cardboard.jpg" loading="eager">
+            <div class="carousel-text">
+                <h2>Slide 2 Title</h2>
+                <p>Slide 2 Description</p>
+            </div>
+        </div>
+        <!-- Input -->
+        <div class="carousel-input">
+            <button id="previous-slide-button">
+                <img src="public/arrow-right.png" alt="right arrow" style="width: 40px; height: 40px; transform: scaleX(-1);">
+            </button>
+            <button id="next-slide-button">
+                <img src="public/arrow-right.png" alt="right arrow" style="width: 40px; height: 40px;">
+            </button>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
 </body>
 </html>
