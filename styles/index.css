@@ -80,14 +80,25 @@ header a:hover{
 
 
 
+/* ----- Footer ------ */
+footer {
+
+}
+
+
+
+
 
 
 
 /* ----- Info ------ */
 #info {
-    background: linear-gradient(white 50%, #008b8b 100%);
+    background: linear-gradient(white 10%, #008b8b 100%);
     margin: 0px;
     height: 800px;
+}
+#info a {
+    color: darkred;
 }
 #info_grid_container {
     display: grid;
@@ -108,12 +119,32 @@ header a:hover{
 /* NOTE: remember that the index of a column must be one greater than the 
          index of the final column the element will occupy
 */
-#info_grid_container > #college_info {
+#college_info {
     margin-top: 25px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px; /* 340x3 which is size of all children */
+    flex-wrap: wrap;
+}
+#college_info > div {
+    border: 2px solid black;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    width: 300px;
+}
+#college_logo_container {
+    display: block;
+    width: 250px;
+    height: auto;
 }
 
 
