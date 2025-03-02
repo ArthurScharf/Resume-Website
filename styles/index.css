@@ -22,9 +22,8 @@ h1, h2, h3, h4, h5, h6, ul, p{
 
 /* ----- Universal Style ----- */
 a {
-    color: darkred;
+    color: #302424 ;/*darkred;*/
     text-decoration-line: none;
-
 }
 body {
     font-family: 'Roboto', 'Open Sans', 'Arial', sans-serif;
@@ -43,14 +42,14 @@ header {
     align-content: center;
     width: 100%;
     height: 50px;
-    background-color: grey;
+    background-color: #302424;
     margin-top: 0px;
     /* background: linear-gradient(White, rgba(255, 255, 255, 0));*/
 }
 
 header a {
     font-size: x-large;
-    flex-grow: 1;
+   /* flex-grow: 1;*/
     padding: 5px;
     margin: 2px;
     margin-top: 0px;
@@ -84,10 +83,20 @@ header a:hover{
 footer {
     width: 100%;
     height: 50px;
-    background: #4f4d48;
+    background: #302424;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }
 
+footer > p {
+    margin: auto;
+    color: grey;
+}
 
+footer > #my-name{
+    font-size:larger;
+}
 
 
 
@@ -150,10 +159,15 @@ footer {
     flex-basis: 100%;
     flex-grow: 1; /* Expands to fill the entire space available */
 }
-#college_logo_container > img {
+#college_logo_container img {
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 250px;
+    height: auto;
+
 }
+
 
 
 
@@ -258,14 +272,12 @@ footer {
 /* ----- Resume -----*/
 #resume {
     /*background: linear-gradient(lightgrey 50%, grey 100%);*/
-    background: linear-gradient(lightgrey 50%, #008b8b 150%);
+    background: linear-gradient(white 5%, #008b8b 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 20px;
 }
-
-
 
 
 #contact_info_container * {
@@ -284,14 +296,20 @@ footer {
 
 
 
-/* ----- Contact Me ----- */
-/*#contact {
-    color: white;
-    flex-direction: column;
-    display: flex;
-    justify-content: flex-end;
-    background: linear-gradient(grey 0%, black 70%);
-    margin: 0px;
+/*----- Contact Me -----*/
+#contact {
+    
     padding: 25px;
-    height: 1000px;
-}*/
+    height:stretch;
+}
+
+#contact-container {
+    background: linear-gradient(white 5%, #008b8b 100%);
+    height: 90vh;
+}
+
+#contact-container > footer{
+    position:absolute;
+    bottom: 0px;
+
+}
