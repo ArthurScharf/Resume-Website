@@ -28,6 +28,9 @@ a {
 body {
     font-family: 'Roboto', 'Open Sans', 'Arial', sans-serif;
     margin: 0;
+
+    display:flex;
+    flex-direction: column;
 }
 
 
@@ -126,6 +129,10 @@ footer > #my-name{
     grid-column-start: 2;
     grid-column-end: 2;
 }
+#italics {
+    font-style: italic
+}
+
 
 /* NOTE: remember that the index of a column must be one greater than the 
          index of the final column the element will occupy
@@ -173,10 +180,6 @@ footer > #my-name{
 
 
 
-
-
-
-
 /* ---- Projects ---- */
 .carousel-container{
     background-color: lightgrey;
@@ -184,13 +187,15 @@ footer > #my-name{
     justify-self: center;
     justify-content: center;
 
-    height: 600px;
-    width: 900px;
+    /*height: 600px;
+    width: 900px;*/
+    width: 75%;
 }
 
 .carousel-input{
     display: flex;
     justify-content: center;
+    height: 50px;
 }
 
 .carousel-input button{
@@ -207,24 +212,47 @@ footer > #my-name{
 
 .carousel-slide {
     background-color: black;
-    display: flex;
+    position: relative; /* need this to create a positioning context so text can properly inherit it's position while also being absolute*/
+    display: block;
+    /*display: flex;*/
     justify-content: center;
-    width: 100%;
+/*    width: auto;*/
 }
 
 
 .carousel-slide img{
-    width: 50%;
+    display: block;
+    width: 100%;
     height: auto;
-    z-index: 0;
 }
 
 .carousel-text {
-    position: absolute;
-    z-index: 1;
+    pointer-events: none; /* Doesn't hit detect so carousel buttons still work */
 
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0, 0.5);
     animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 1s;
 }
+
+/* Keeps the text within the image bounds */
+@media (max-width: 600px)
+{
+    #projects p {
+        font-size: smaller;
+    }
+}
+
 
 @keyframes fadeIn {
     0%{
@@ -235,8 +263,24 @@ footer > #my-name{
     }
 }
 
+.carousel-text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#left_arrow {
+    width: 40px;
+    height: 40px;
+    transform: scaleX(-1);
+}
 
 
+#right_arrow {
+    width: 40px;
+    height: 40px;
+}
 
 
 
@@ -259,11 +303,14 @@ footer > #my-name{
 
 .paragraphs h2 {
     justify-self: center;
+    margin-bottom: 12px;
 }
 
 .paragraphs li {
     color: #343434;
 }
+
+
 
 
 
@@ -294,6 +341,16 @@ footer > #my-name{
 }
 
 
+#github_logo {
+    width: 120px;
+    height: auto;
+    transform: translateX(-7px);
+}
+
+#linkedin_logo {
+    width: 100px; height: auto;
+}
+
 
 
 /*----- Contact Me -----*/
@@ -303,13 +360,17 @@ footer > #my-name{
     height:stretch;
 }
 
-#contact-container {
+.container {
     background: linear-gradient(white 5%, #008b8b 100%);
     height: 90vh;
 }
 
-#contact-container > footer{
+#contact-content{
+    height: 100vh;
+}
+
+
+/*#contact-container footer{
     position:absolute;
     bottom: 0px;
-
-}
+}*/

@@ -3,12 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Projects</title>
-    <style>
-        body {
-            margin: 0;
-        }
-    </style>
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <header>
@@ -20,34 +15,79 @@
         </nav>
     </header>
 
-    <!-- Personal Projects -->
-    <div id="projects" class="carousel-container">
-        <!-- Slide 1 -->
-        <div class="carousel-slide">
-            <img src="public/face.jpg" loading="eager">
-            <div class="carousel-text">
-                <h2>Slide 1 Title</h2>
-                <p>Slide 1 Description</p>
+
+    <div class="container">
+        <!-- Personal Projects -->
+        <div id="projects" class="carousel-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+                <img src="public/Asteroids_code.png" alt="C++ code for the project" loading="eager">
+                <div class="carousel-text">
+                    <h2>Multiplayer Game Prototype</h2>
+                    <p>
+                        A multiplayer game prototype. This project features a custom rendering solution and a custom
+                        network protocol for responsive multiplayer movement. I'm especially proud of the `from-scratch` network solution.
+                        Real-time multiplayer games are a non-trivial problem.
+                        OpenGL was used for rendering, and WinSock was used for networking. <br>
+                        Completed: Nov 2024
+                    </p>
+                </div>
             </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-            <img src="public/cardboard.jpg" loading="eager">
-            <div class="carousel-text">
-                <h2>Slide 2 Title</h2>
-                <p>Slide 2 Description</p>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <img src="public/repairDB.png" alt="front end Access application" loading="eager">
+                <div class="carousel-text">
+                    <h2>Repair Service Database System</h2>
+                    <p>
+                        A database application for tracking appointments with a repair company. The software uses SQL Server as a backend,
+                        which tracks the technicians, vehicles, jobs, and appointments for those jobs. Microsoft Access was used to develop
+                        the front-end for the application.<br>
+                        Completed: February 2025
+                    </p>
+                </div>
             </div>
-        </div>
-        <!-- Input -->
-        <div class="carousel-input">
-            <button id="previous-slide-button">
-                <img src="public/arrow-right.png" alt="right arrow" style="width: 40px; height: 40px; transform: scaleX(-1);">
-            </button>
-            <button id="next-slide-button">
-                <img src="public/arrow-right.png" alt="right arrow" style="width: 40px; height: 40px;">
-            </button>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <img src="public/fps.png" alt="screenshot of the player shooting enemies" loading="eager">
+                <div class="carousel-text">
+                    <h2>FPS-Deckbuilder Prototype</h2>
+                    <p>
+                        Built on The Unreal Engine 4, this project was an experimental blend of deckbuilder games and first-person-shooters.
+                        The player deals damage, takes damage and dodges attacks to generate resources they can
+                        spend on powerful abilities.
+                        This project uses OOP programming principles with C++ for full effect to create a complex
+                        game character hierarchy, an ability system, and efficient AI. It also takes full advantage of
+                        UE4 to implement particle systems, animation state machines, and the Environmental Querying System
+                        <br>
+                        Completed: September 2023
+                    </p>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+                <img src="public/fitness_tracker.png" alt="screenshot of a function from the application" loading="eager">
+                <div class="carousel-text">
+                    <h2>Fitness Tracker</h2>
+                    <p>
+                        Built with Java, school project was a means to test our object oriented programming concepts,
+                        as well as expecting us to properly test the code using JUnit.
+                        <br>
+                        Completed: February 2025
+                    </p>
+                </div>
+            </div>
+            <!-- Input -->
+            <div class="carousel-input">
+                <button id="previous-slide-button">
+                    <img id="left_arrow" src="public/arrow-right.png" alt="right arrow">
+                </button>
+                <button id="next-slide-button">
+                    <img id="right_arrow" src="public/arrow-right.png" alt="right arrow">
+                </button>
+            </div>
         </div>
     </div>
+
 
     <footer>
         <p>
